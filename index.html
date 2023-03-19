@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Swift Reader App</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+        <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+        <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+        <link rel="stylesheet" href="index.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    </head>
+    
+    <body>
+        
+        <!--Page1-->
+        <div data-role="page" id="page1" data-theme="a">
+            <div data-role="header">
+                
+            </div>
+            
+            <div role="main" class="ui-content">
+                <!--title-->
+                <div class="header">
+                    <h1>Swift Reader App</h1>
+                    <p>For an efficient reading experience.</p>
+                </div>
+                <div id="controls">
+                    <!--Font-size and speed-->
+                    <div class="ui-grid-a">
+                        <div class="ui-block-a">
+                            <div>
+                                FONT SIZE: <span id="fontsize">50</span> px.
+                            </div>
+                        </div>
+                        <div class="ui-block-b">
+                            <div>
+                                <span id="speed">300</span> WORDS PER MINUTE.
+                            </div>
+                        </div>
+                    </div>
+                
+                    <!--Font-size and speed-->
+                    <div class="ui-grid-a">
+                        <div class="ui-block-a">
+                            <form class="full-width-slider">
+                                <input type="range" name="fontsizeslider" id="fontsizeslider" min="20" max="100" value="50" step="5"
+                                    data-highlight="true">
+                            </form>
+                        </div>
+                        <div class="ui-block-b">
+                            <form class="full-width-slider">
+                                <input type="range" name="speedslider" id="speedslider" min="50" max="600" value="300" step="50"
+                                    data-highlight="true">
+                            </form>
+                        </div>
+                    </div>
+                
+                    <!--Progress-->
+                    <form class="full-width-slider">
+                        <label for="progressslider">PROGRESS: <span id="percentage">0</span>%</label>
+                        <input type="range" name="progressslider" id="progressslider" min="0" max="100" value="0" data-highlight="true">
+                    </form>
+                </div>
+                <!--the read word-->
+                <div id="result">word</div>
+                <!--error message-->
+                <div id="error">
+                    Please paste text in the box!
+                </div>
+                <!--User input-->
+                <div id="inputs">
+                    <!--text input-->
+                    <textarea id="userInput"></textarea>
+                    <!--buttons-->
+                    <button id="start">Start Reading</button>
+                    <button id="new">New</button>
+                    <button id="pause">Pause</button>
+                    <button id="resume">Resume</button>
+                </div>
+            </div>
+            
+            <div data-role="footer" data-position="fixed">
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#page1" data-transition="pop" data-icon="home" class="ui-btn-active ui-state-persist" >Home</a></li>
+                        <li><a href="#page2" data-transition="pop" data-icon="info" >About</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+        </div><!--Page1-->
+        
+        
+        <!--Page2-->
+        <div data-role="page" id="page2" data-theme="b">
+            <div data-role="header">
+                
+            </div>
+            
+            <div role="main" class="ui-content">
+                <ul data-role="listview">
+                    <li data-role="list-divider">About</li>
+                    <li><a href="about.html">App Information</a></li>
+                    <li><a href="dialog.html">Rate the App</a></li>
+                    <div data-role="collapsible" data-collapsed-icon="carat-d" data-expanded-icon="carat-u" data-iconpos="right">
+                        <h1>Credits</h1>
+                        <li>Neeta Modak</li>
+                    </div>
+                    <div data-role="collapsible" data-collapsed-icon="carat-d" data-expanded-icon="carat-u" data-iconpos="right">
+                        <h1>Contacts</h1>
+                        <li>e-mail: swiftreader911@gmail.com</li>
+                    </div>
+                    <li><a>Version 1.5.9</a></li>
+
+                    <li data-role="list-divider">Legal</li>
+                    <li><a href="https://www.privacypolicies.com/live/8688ce38-52cc-4d5a-96eb-a933fd49f05b">Privacy Policy</a></li>
+                    <li><a href="https://www.privacypolicies.com/live/2f50b645-7856-468d-83a6-7763149ba44a">Terms & Conditions</a></li>
+                </ul>
+            </div>
+            
+            <div data-role="footer" data-position="fixed">
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#page1" data-transition="pop" data-icon="home">Home</a></li>
+                        <li><a href="#page2" data-transition="pop" data-icon="info"  class="ui-btn-active ui-state-persist" >About</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+        </div><!--Page2-->
+        
+        
+        
+        <script src="index.js">
+            
+        </script>
+    </body>
+</html>
